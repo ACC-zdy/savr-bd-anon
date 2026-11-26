@@ -1,0 +1,374 @@
+{
+  "experiment": "large_N_tabular_scalability",
+  "N_grid": [
+    2500,
+    10000,
+    30000,
+    100000
+  ],
+  "d": 40,
+  "minibatch_size": 128,
+  "epoch_length": 200,
+  "sigma_fixed": 0.008,
+  "methods": [
+    "SGLD",
+    "SVRG-SGLD",
+    "v-SGBD",
+    "c-SGBD",
+    "NaiveVR-SGBD",
+    "SaVR-BD (SVRG)",
+    "SaVR-BD (SAGA)"
+  ],
+  "results": {
+    "SGLD": {
+      "2500": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.6687075524238006,
+        "param_err_std": 0.06171890368572297,
+        "test_nll_mean": 0.1069984345596601,
+        "test_nll_std": 0.0010428900633426485,
+        "brier_mean": 0.03210178595484101,
+        "ece_mean": 0.012476916787170994,
+        "ms_per_100_steps": 15.720290000172099,
+        "fallback_frac": 0.0
+      },
+      "10000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.5871147040917237,
+        "param_err_std": 0.06393387612634863,
+        "test_nll_mean": 0.09466873583209524,
+        "test_nll_std": 0.0006523895215648003,
+        "brier_mean": 0.028165838477072484,
+        "ece_mean": 0.006939416243904659,
+        "ms_per_100_steps": 15.709457500270219,
+        "fallback_frac": 0.0
+      },
+      "30000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 1.630437451600325,
+        "param_err_std": 0.049103986951178916,
+        "test_nll_mean": 0.09453307096460442,
+        "test_nll_std": 0.0005669348008784964,
+        "brier_mean": 0.027828942262804895,
+        "ece_mean": 0.00986279250320316,
+        "ms_per_100_steps": 16.228469999623485,
+        "fallback_frac": 0.0
+      },
+      "100000": {
+        "diverged_count": 5,
+        "n_seeds": 5,
+        "param_err_mean": NaN,
+        "param_err_std": NaN,
+        "test_nll_mean": NaN,
+        "test_nll_std": NaN,
+        "brier_mean": NaN,
+        "ece_mean": NaN,
+        "ms_per_100_steps": NaN,
+        "fallback_frac": 0.0
+      }
+    },
+    "SVRG-SGLD": {
+      "2500": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.7175386142452433,
+        "param_err_std": 0.063415084528114,
+        "test_nll_mean": 0.10755209106442538,
+        "test_nll_std": 0.0017274140785543848,
+        "brier_mean": 0.03232107176018695,
+        "ece_mean": 0.011988138614979011,
+        "ms_per_100_steps": 20.456299999932526,
+        "fallback_frac": 0.0
+      },
+      "10000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.5774449947845273,
+        "param_err_std": 0.044195088848098946,
+        "test_nll_mean": 0.09487874788430109,
+        "test_nll_std": 0.0005861584945032287,
+        "brier_mean": 0.028244574542624114,
+        "ece_mean": 0.006504295516621647,
+        "ms_per_100_steps": 21.365317500385572,
+        "fallback_frac": 0.0
+      },
+      "30000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.7339646453913232,
+        "param_err_std": 0.28268491293634984,
+        "test_nll_mean": 0.09363268623370793,
+        "test_nll_std": 0.0005380876795865988,
+        "brier_mean": 0.027624546445950093,
+        "ece_mean": 0.008911699943404664,
+        "ms_per_100_steps": 22.875134999776492,
+        "fallback_frac": 0.0
+      },
+      "100000": {
+        "diverged_count": 4,
+        "n_seeds": 5,
+        "param_err_mean": 9.105660668706685,
+        "param_err_std": 0.0,
+        "test_nll_mean": 0.09795986814188999,
+        "test_nll_std": 0.0,
+        "brier_mean": 0.027863948924849495,
+        "ece_mean": 0.007803835604264529,
+        "ms_per_100_steps": 27.869012499650125,
+        "fallback_frac": 0.0
+      }
+    },
+    "v-SGBD": {
+      "2500": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.5776198738772985,
+        "param_err_std": 0.03555851531740479,
+        "test_nll_mean": 0.1058638316394167,
+        "test_nll_std": 0.00118782119542451,
+        "brier_mean": 0.03156401095349788,
+        "ece_mean": 0.013288456244719226,
+        "ms_per_100_steps": 19.181659999958356,
+        "fallback_frac": 0.0
+      },
+      "10000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.4533321875513499,
+        "param_err_std": 0.07010650768497637,
+        "test_nll_mean": 0.09456543856320954,
+        "test_nll_std": 0.0004383478305618315,
+        "brier_mean": 0.028151337905355994,
+        "ece_mean": 0.006035089736716207,
+        "ms_per_100_steps": 20.39736750011798,
+        "fallback_frac": 0.0
+      },
+      "30000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.39387319733597864,
+        "param_err_std": 0.12945891050589203,
+        "test_nll_mean": 0.09351145123008173,
+        "test_nll_std": 0.000895263733402534,
+        "brier_mean": 0.02764042014105737,
+        "ece_mean": 0.009205151379583432,
+        "ms_per_100_steps": 20.14345749958011,
+        "fallback_frac": 0.0
+      },
+      "100000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.32692860647017125,
+        "param_err_std": 0.08570403308777226,
+        "test_nll_mean": 0.09303353337662801,
+        "test_nll_std": 0.0007448048442957256,
+        "brier_mean": 0.027477062090625098,
+        "ece_mean": 0.009894302792496498,
+        "ms_per_100_steps": 20.696150000367197,
+        "fallback_frac": 0.0
+      }
+    },
+    "c-SGBD": {
+      "2500": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.5943834308167448,
+        "param_err_std": 0.03469097412311826,
+        "test_nll_mean": 0.10508232742759134,
+        "test_nll_std": 0.001436535123689384,
+        "brier_mean": 0.03143914193464796,
+        "ece_mean": 0.011796804728297522,
+        "ms_per_100_steps": 34.31359499991231,
+        "fallback_frac": 0.11176875
+      },
+      "10000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.454557408318401,
+        "param_err_std": 0.09878778281587472,
+        "test_nll_mean": 0.09430388358715533,
+        "test_nll_std": 0.00040975766108589226,
+        "brier_mean": 0.028111060113559988,
+        "ece_mean": 0.005472314118226391,
+        "ms_per_100_steps": 34.10539000069548,
+        "fallback_frac": 0.44459374999999995
+      },
+      "30000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.376723269104963,
+        "param_err_std": 0.10609206667197942,
+        "test_nll_mean": 0.0935807695248592,
+        "test_nll_std": 0.0008543176479473194,
+        "brier_mean": 0.027628798590862213,
+        "ece_mean": 0.008791170801983241,
+        "ms_per_100_steps": 34.17750249973324,
+        "fallback_frac": 0.7290624999999998
+      },
+      "100000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.3103352363000227,
+        "param_err_std": 0.06010382455806735,
+        "test_nll_mean": 0.09329295975555219,
+        "test_nll_std": 0.0007480487124680506,
+        "brier_mean": 0.027546237030038768,
+        "ece_mean": 0.010242271706433898,
+        "ms_per_100_steps": 35.524952500418294,
+        "fallback_frac": 0.9967687499999999
+      }
+    },
+    "NaiveVR-SGBD": {
+      "2500": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.6585234405983893,
+        "param_err_std": 0.07894944382279741,
+        "test_nll_mean": 0.1056308776225358,
+        "test_nll_std": 0.0019351773290329623,
+        "brier_mean": 0.031672533730340374,
+        "ece_mean": 0.011761342314168075,
+        "ms_per_100_steps": 39.25619250039745,
+        "fallback_frac": 0.0
+      },
+      "10000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.4964802573279313,
+        "param_err_std": 0.12502361655647748,
+        "test_nll_mean": 0.0944198055107892,
+        "test_nll_std": 0.00013242653849998394,
+        "brier_mean": 0.02815398633500128,
+        "ece_mean": 0.0067862770979528544,
+        "ms_per_100_steps": 42.27233499914291,
+        "fallback_frac": 0.0
+      },
+      "30000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.34399233223472586,
+        "param_err_std": 0.079401902213916,
+        "test_nll_mean": 0.09301129723657367,
+        "test_nll_std": 0.00017041969992531128,
+        "brier_mean": 0.02748902092317675,
+        "ece_mean": 0.008313811656317246,
+        "ms_per_100_steps": 42.5877000001492,
+        "fallback_frac": 0.0
+      },
+      "100000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.16392242193680326,
+        "param_err_std": 0.0404893651275596,
+        "test_nll_mean": 0.09287058035001802,
+        "test_nll_std": 8.599127384003998e-05,
+        "brier_mean": 0.027423861066578265,
+        "ece_mean": 0.009515215784637258,
+        "ms_per_100_steps": 39.18850249974639,
+        "fallback_frac": 0.0
+      }
+    },
+    "SaVR-BD (SVRG)": {
+      "2500": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.6569177075911634,
+        "param_err_std": 0.08165618170420089,
+        "test_nll_mean": 0.10549782654555792,
+        "test_nll_std": 0.001922203868601103,
+        "brier_mean": 0.031642269752413396,
+        "ece_mean": 0.011981426255899204,
+        "ms_per_100_steps": 41.06713999972271,
+        "fallback_frac": 0.0
+      },
+      "10000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.49810538306927266,
+        "param_err_std": 0.12296096387828996,
+        "test_nll_mean": 0.09423277648409036,
+        "test_nll_std": 0.00025440001436753787,
+        "brier_mean": 0.028105318744137898,
+        "ece_mean": 0.00666267343622481,
+        "ms_per_100_steps": 42.99507750001794,
+        "fallback_frac": 0.0
+      },
+      "30000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.3623956563660968,
+        "param_err_std": 0.0807905393998087,
+        "test_nll_mean": 0.09310004793704392,
+        "test_nll_std": 0.00027887135370191615,
+        "brier_mean": 0.02750347559426758,
+        "ece_mean": 0.008695717671172672,
+        "ms_per_100_steps": 43.49279500020202,
+        "fallback_frac": 0.0
+      },
+      "100000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.1734078381851462,
+        "param_err_std": 0.04107248197956073,
+        "test_nll_mean": 0.09284177767533797,
+        "test_nll_std": 0.00014884215771866172,
+        "brier_mean": 0.027418712573659788,
+        "ece_mean": 0.009155482000657167,
+        "ms_per_100_steps": 37.30177500001446,
+        "fallback_frac": 0.0
+      }
+    },
+    "SaVR-BD (SAGA)": {
+      "2500": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.6042706985389279,
+        "param_err_std": 0.06425182113025538,
+        "test_nll_mean": 0.10591226084903867,
+        "test_nll_std": 0.0018915373196577334,
+        "brier_mean": 0.03159569618676409,
+        "ece_mean": 0.013068851448821662,
+        "ms_per_100_steps": 40.696665000359644,
+        "fallback_frac": 0.0
+      },
+      "10000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.47812915154895,
+        "param_err_std": 0.07982901390574731,
+        "test_nll_mean": 0.09387115749054428,
+        "test_nll_std": 0.00047793760554431147,
+        "brier_mean": 0.02790879841682043,
+        "ece_mean": 0.006231709739870642,
+        "ms_per_100_steps": 43.54719750044751,
+        "fallback_frac": 0.0
+      },
+      "30000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.3241902906868667,
+        "param_err_std": 0.07870805318502079,
+        "test_nll_mean": 0.0930361912053784,
+        "test_nll_std": 0.000365717568120417,
+        "brier_mean": 0.027469373677460246,
+        "ece_mean": 0.00953859646780161,
+        "ms_per_100_steps": 41.620002499985276,
+        "fallback_frac": 0.0
+      },
+      "100000": {
+        "diverged_count": 0,
+        "n_seeds": 5,
+        "param_err_mean": 0.15461847236194406,
+        "param_err_std": 0.05101441468203843,
+        "test_nll_mean": 0.09274472960395419,
+        "test_nll_std": 0.0002168184816993769,
+        "brier_mean": 0.027374044410660898,
+        "ece_mean": 0.009189374163913073,
+        "ms_per_100_steps": 41.00944000019808,
+        "fallback_frac": 0.0
+      }
+    }
+  }
+}
